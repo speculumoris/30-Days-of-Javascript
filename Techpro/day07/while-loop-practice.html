@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While practice</title>
+</head>
+<body>
+
+    <input type="number" id="num" placeholder="Bir sayı..." />
+    <button onclick="calculate()">Hesapla</button>
+    <h3></h3>
+    <script>
+       function calculate(){
+       let num = document.querySelector('#num').value;
+        let sum =0;
+        while(num>0 ){
+            let digit = num%10;
+            sum+=digit;
+            num=parseInt(num/10);
+        }
+        document.querySelector('h3').innerText=sum
+    }
+
+    </script>
+</body>
+</html>

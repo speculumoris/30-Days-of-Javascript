@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eval    </title>
+</head>
+<body>
+    <h2>Eval</h2>
+    <input type="text" name="" id="num" placeholder="">
+    <button onclick="calculate()" >Hesapla</button>
+    <div class="result"></div>
+<script>
+    //alert(eval("2+2*4/2"));
+
+    function calculate(){
+       let num = document.querySelector("#num").value;
+        let result =eval(num);
+        document.querySelector(".result").innerHTML = `Sonuç: ${result}`;
+
+    }
+</script>
+</body>
+</html>

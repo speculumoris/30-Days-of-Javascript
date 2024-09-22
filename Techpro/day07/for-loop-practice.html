@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For loop practice</title>
+  </head>
+  <body>
+    <h2>indirim uygulaması</h2>
+
+    <input type="number" id="discount" placeholder="indirim oranı..." />
+    <button onclick="makeDiscount()">indirim uygula</button>
+    <ul id="productList">
+      <li>Notebook: <span> 1500</span></li>
+      <li>Tablet: <span> 500</span></li>
+      <li>Klavye: <span> 100</span></li>
+      <li>mouse: <span> 20</span></li>
+      <li>Memory Card: <span>5 0</span></li>
+      <li>Headphone: <span> 500</span></li>
+      <li>Monitor: <span> 1000</span></li>
+      <li>Phone: <span> 2000</span></li>
+      <li>Computer: <span> 2500</span></li>
+    </ul>
+    <script>
+      function makeDiscount() {
+        let discount = document.querySelector("#discount").value;
+        let productList = document.querySelectorAll("#productList li span");
+        for (let i = 0; i < productList.length; i++) {
+          let price = productList[i].innerText;
+          let discountedPrice = price - price / 10;
+
+          productList[i].innerText = discountedPrice;
+        }
+      }
+    </script>
+  </body>
+</html>
